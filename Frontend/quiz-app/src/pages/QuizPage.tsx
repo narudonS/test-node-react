@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Question from '../components/Question';
 import { getRandomQuestions } from '../utils/randomize';
-import './styles.css';
+import '../styles.css';
 
 const QuizPage: React.FC = () => {
     const [questions, setQuestions] = useState(getRandomQuestions());
