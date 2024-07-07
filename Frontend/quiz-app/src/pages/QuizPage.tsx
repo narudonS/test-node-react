@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Question from '../components/Question';
 import { getRandomQuestions } from '../utils/randomize';
-
+import './styles.css';
 
 const QuizPage: React.FC = () => {
     const [questions, setQuestions] = useState(getRandomQuestions());
@@ -28,9 +28,11 @@ const QuizPage: React.FC = () => {
     };
 
     return (
-        <div>
+        <div className="centered-container">
+            <p>Question {currentQuestionIndex + 1} / {questions.length}</p> {/* Display current question number */}
             {questions.length > 0 && (
                 <Question
+                    currentQuestionIndex={currentQuestionIndex + 1}
                     question={questions[currentQuestionIndex].question}
                     answers={questions[currentQuestionIndex].answers}
                     onAnswer={handleAnswer}
