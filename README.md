@@ -1,2 +1,5 @@
 # test-node-react
-Test backend nodejs and frontend react
+Test
+backend use nodejs
+frontend use reactjs (Typescript) + vite
+technical quiz use js
